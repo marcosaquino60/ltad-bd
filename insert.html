@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inserir Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="pessoasbd.php">Pessoas</a></li>
+            <li><a href="estoquebd.php">Estoque</a></li>
+            <li><a href="projetos.php">Projetos</a></li>
+            <li><a href="insert.html">Adicionar</a></li>
+            </ul>
+            <div class="searchBox">
+              <form class="formSearch" action="buscar.php" method="GET">
+                <input type="text" name="searchInput" placeholder="Digite sua pesquisa...">
+                <input type="submit" value="Pesquisar" >
+              </form>
+            </div>
+        </div>
+</header>
+<h2>Inserir Dados</h2>
+
+<!-- Formulário para inserção na tabela Pessoa -->
+<form action="processar_dados.php" method="post">
+    <h3>Inserir dados na Tabela Pessoa:</h3>
+    <input type="hidden" name="tabela" value="pessoa"> <!-- Valor oculto para identificar a tabela -->
+    <input type="text" name="nome" placeholder="Nome"><br>
+    <input type="text" name="email" placeholder="Email"><br>
+    <input type="text" name="telefone" placeholder="Telefone"><br>
+    <input type="date" name="data_nascimento"><br>
+    <input type="submit" value="Inserir Dados">
+</form>
+
+<hr> 
+
+
+<form action="processar_dados.php" method="post">
+    <h3>Inserir dados na Tabela Estoque:</h3>
+    <input type="hidden" name="tabela" value="estoque">
+    <input type="text" name="nome" placeholder="Nome"><br>
+    <input type="number" name="qtd" placeholder="Quantidade"><br>
+    <textarea name="descricao"  cols="30" rows="10"></textarea>
+    <input type="submit" value="Inserir Dados">
+</form>
+
+<hr>
+
+<form action="processar_dados.php" method="post">
+    <h3>Inserir dados na Tabela Projeto:</h3>
+    <input type="hidden" name="tabela" value="projetos">
+    <input type="text" name="nome" placeholder="Nome"><br>
+    <textarea name="descricao"  cols="30" rows="10"></textarea>
+    <input type="text" name="nomesupervisor" placeholder="Nome do Supervisor">
+    <input type="submit" value="Inserir Dados">
+</form>
+
+
+</body>
+</html>

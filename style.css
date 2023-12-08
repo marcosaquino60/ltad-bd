@@ -1,19 +1,52 @@
-body {
+  body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+  }
+
+  header {
+    color: #fff;
+    background-color: #000;
   }
   
-  h1 {
-    text-align: center;
+  .container {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .searchBox {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  .formSearch {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
   }
   
   input[type="text"] {
     padding: 8px;
-    width: 200px;
+    width: 150px;
   }
   
   input[type="submit"] {
-    padding: 8px 16px;
+    padding: 8px 8px;
     cursor: pointer;
   }
   
@@ -21,5 +54,6 @@ body {
   .result {
     margin: 10px 0;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #bbb;
+    background-color: #ccc;
   }

@@ -11,7 +11,7 @@
         <ul class="menu">
           <li><a href="pessoasbd.php">Pessoas</a></li>
           <li><a href="estoquebd.php">Estoque</a></li>
-          <li><a href="">Projetos</a></li>
+          <li><a href="projetos.php">Projetos</a></li>
           <li><a href="insert.html">Adicionar</a></li>
         </ul>
         <div class="searchBox">
@@ -23,7 +23,24 @@
     </div>
   </header>
 
+  <div>
+    <?php
+        include 'conexao.php';
 
+        $sql = "SELECT * FROM Usuários";
+        $result = $conn->query($sql);
+
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='result' >Nome: " . $row["nome"] . " - Email: " . $row["email"] . " - Telefone: " . $row["telefone"] . " - Data de Nascimento: " . $row["data_nascimento"] . "</div>";
+            }
+        }
+        else {
+            echo "Nenhum resultado encontrado.";
+        }
+
+    ?>
+  </div>  
 
 </body>
 </html>
